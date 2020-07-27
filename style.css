@@ -1,0 +1,147 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: none;
+    background-color: #365199;
+     }
+  
+  html {
+    font-size: 24px;
+    font-family: 'Unica One', cursive;
+  }
+
+  h1 {
+      color: white;
+      
+  }
+  
+  #app {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding: 1rem 0;
+  }
+  
+  #app h1 {
+    font-size: 3rem;
+    letter-spacing: 0.5rem;
+    margin-bottom: 8px;
+  }
+
+  .calculator {
+      border: 2px solid white;
+      border-radius: 5px;
+      width: 400px;
+      box-shadow: 5px 5px 8px -4px gray;
+      height: 500px;
+      background-color:white;
+  }
+
+  .display {
+    font-size: 1rem;
+    height: 80px;
+    width: 100%;
+    border: 2px solid #BFF2FF;
+    border-radius: 12px;
+    background-color: #BFF2FF;
+    color: black;
+    height: 150px;
+    text-align: right;
+    padding: 5px 8px;
+    display: grid;
+    grid-template-rows: 40px 50px 60px; 
+    grid-gap: 10px;
+    grid-column: 1/6;
+    grid-row: 1/4;
+    grid-template-columns: repeat(5,1fr);
+  }
+
+  .controls {
+      padding-top: 8px;
+      padding-left: 8px;
+      padding-right: 8px;
+    grid-template-rows: repeat(5, 1fr); 
+    display: grid;
+    background-color:white;
+    grid-gap: 10px;
+    grid-template-columns: repeat(4, 1fr);
+    
+  }
+
+  .operations {
+      grid-column: 4/5;
+      grid-row: 1/6;
+      display: grid;
+      grid-gap: 10px;
+       background-color:white;
+      grid-template-rows: repeat (5,1fr);
+
+  }
+
+  .digits {
+    grid-column: 1/4;
+    grid-row: 2/6;
+    display: grid;
+    background-color:white;
+    grid-gap: 12px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+  }
+
+  .digits last-of-type {
+      grid-column: 2/4;
+      background-color:white;
+  }
+
+  .memory {
+      grid-column: 1/4;
+      grid-row: 1;
+      display: grid;
+      background-color:white;
+      grid-gap: 12px;
+      grid-template-columns: 2fr 3fr;
+  }
+
+button {
+    height: 55px;
+}
+
+.memory button {
+    background-color: rgb(125, 210, 243);
+}
+
+.operations button {
+    background-color: rgb(145, 243, 125);
+}
+
+.digits button {
+    background-color: rgb(255, 215, 222);
+}
+
+button.equals {
+    background-color: #3C7F66;
+    color: white;
+}
+
+.digits :last-of-type {
+    grid-column: 2/4;
+}
+
+.held-label {
+    background-color: #BFF2FF;
+}
+
+.held-value {
+    background-color: #BFF2FF;
+}
+
+.next-operation {
+    background-color: #BFF2FF;
+}
+
+.next-value {
+    background-color: #BFF2FF;
+}
